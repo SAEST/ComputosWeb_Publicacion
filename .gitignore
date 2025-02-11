@@ -4,6 +4,7 @@
 /tests/screenshots_publi/
 /pages/__pycache__/
 /utils/__pycache__/
+/allure-results/
 *.csv
 *.zip
 *.txt

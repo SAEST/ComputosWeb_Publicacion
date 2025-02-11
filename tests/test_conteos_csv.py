@@ -37,14 +37,14 @@ def test_calculo_validacion_datos(data_values, allure_story, valor, valor2, enca
                 name="Resultado de la validación",
                 attachment_type=allure.attachment_type.TEXT
             )
-            print(f'Los valores de {encabezado} coinciden. Conteo CSV: {valor} Encabezado CSV: {valor2}')
+            #print(f'Los valores de {encabezado} coinciden. Conteo CSV: {valor} Encabezado CSV: {valor2}')
         else:
             allure.attach(
                 f"Los valores de {encabezado} no coinciden. Conteo CSV: {valor} Encabezado CSV: {valor2}",
                 name="Resultado de la validación",
                 attachment_type=allure.attachment_type.TEXT
             )
-            print(f'Los valores de {encabezado} no coinciden. Conteo CSV: {valor} Encabezado CSV: {valor2}')
+            #print(f'Los valores de {encabezado} no coinciden. Conteo CSV: {valor} Encabezado CSV: {valor2}')
         try:
             assert np.array_equal(valor, valor2)
         except AssertionError:
