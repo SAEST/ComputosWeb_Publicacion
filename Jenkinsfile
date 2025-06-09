@@ -55,6 +55,7 @@ pipeline {
                 sh """
                     . ${VENV_DIR}/bin/activate > /dev/null 2>&1
                     pytest tests/test_descarga_csv.py --html=reports/pytestreport/report1.html --self-contained-html --alluredir=reports/report
+                    pytest tests/test_public_page.py --html=reports/pytestreport/report2.html --self-contained-html --alluredir=reports/report
                     pytest tests/test_conteos_csv.py --html=reports/pytestreport/report3.html --self-contained-html --alluredir=reports/report
                     pytest_html_merger -i /var/jenkins_home/workspace/ComputosWeb_Publicacion/reports/pytestreport -o /var/jenkins_home/workspace/ComputosWeb_Publicacion/reports/pytestreport/report.html
                """
